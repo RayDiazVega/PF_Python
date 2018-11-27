@@ -3,7 +3,8 @@ import time
 import threading
 import multiprocessing
 
-NUM_WORKERS = 4
+NUM_WORKERS = multiprocessing.cpu_count()
+print("The number of workers is",NUM_WORKERS)
 
 def only_sleep():
     #Do nothing, wait for a timer to expire
